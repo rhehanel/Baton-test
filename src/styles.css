@@ -1,0 +1,203 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+#root {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(0deg, #00bbff 0%, #00ebff 100%);
+	overflow: hidden;
+}
+
+.house {
+	width: 30%;
+	position: absolute;
+	bottom:0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.baloon, .house {
+	cursor: pointer;
+	z-index: 2;
+}
+
+.heartBaloon {
+	position: absolute;
+	width: 350px;
+	right: 20%;
+	bottom: 130px;
+	z-index: 3;
+	animation: scale 3s ease infinite;
+}
+
+@keyframes scale {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.heartBaloon svg {
+	transform: rotate(15deg);
+}
+
+.heartBaloon span {
+	display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(26deg);
+    font-size: 94px;
+    color: #fff;
+    text-shadow: 2px 2px 2px gray;
+    font-weight: 900;
+    line-height: 91px;
+}
+
+.cloud {
+	position: absolute;
+	z-index: 1;
+}
+
+.cloud img,
+.house img,
+.heartBaloon img {
+    display: block;
+	width: 100%;
+}
+
+.cloud:hover img {
+	animation: hover 5s linear forwards;
+}
+
+@keyframes hover {
+	0% {
+		transform: translateX(0);
+	}
+
+	25% {
+		transform: translateX(-50px);
+	}
+
+	50% {
+		transform: translateX(0px);
+	}
+
+	75% {
+		transform: translateX(50px);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
+.cloud0 {
+	width: 350px;
+	bottom: -90px;
+	left:20%;
+	transform: rotate(20deg);
+}
+
+.cloud1 {
+	width: 450px;
+	bottom: -100px;
+	right:10%;
+	transform: rotate(-20deg);
+}
+
+.cloud2 {
+	width: 300px;
+	bottom: 80px;
+	left:2%;
+	transform: rotate(15deg);
+}
+
+.cloud3 {
+	width: 100px;
+	bottom: 130px;
+	left:35%;
+	transform: rotate(10deg);
+}
+
+.cloud4 {
+	width: 100px;
+	bottom: 200px;
+	right:35%;
+	transform: rotate(-10deg);
+}
+
+.cloud5 {
+	width: 230px;
+	bottom: 250px;
+	right:7%;
+	transform: rotate(-5deg);
+}
+
+.cloud6 {
+	width: 150px;
+	bottom: 300px;
+	right:20%;
+	transform: rotate(-8deg);
+}
+
+.cloud7 {
+	width: 150px;
+	bottom: 370px;
+	left:20%;
+	transform: rotate(8deg);
+}
+
+.ribbons {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
